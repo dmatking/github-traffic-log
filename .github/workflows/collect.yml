@@ -1,0 +1,53 @@
+name: Collect traffic stats
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 7am UTC = ~2am Central, after GitHub updates data
+  workflow_dispatch:        # allow manual run
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch traffic stats and append to CSV
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          GH_USER: dmatking
+        run: |
+          DATE=$(date -u '+%Y-%m-%d')
+          CSV=traffic.csv
+
+          # Write header if file doesn't exist
+          if [ ! -f "$CSV" ]; then
+            echo "date,repo,views,view_uniques,clones,clone_uniques,stars,forks" > "$CSV"
+          fi
+
+          # Fetch pinned repos via GraphQL
+          PINNED=$(gh api graphql -f query='
+            { user(login: "'"$GH_USER"'") {
+                pinnedItems(first: 6, types: REPOSITORY) {
+                  nodes { ... on Repository { name stargazerCount forkCount } }
+                }
+              }
+            }' --jq '.data.user.pinnedItems.nodes[] | [.name, .stargazerCount, .forkCount] | @tsv')
+
+          while IFS=$'\t' read -r REPO STARS FORKS; do
+            VIEWS=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.count // 0')
+            VIEW_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.uniques // 0')
+            CLONES=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.count // 0')
+            CLONE_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.uniques // 0')
+            echo "$DATE,$REPO,$VIEWS,$VIEW_UNIQ,$CLONES,$CLONE_UNIQ,$STARS,$FORKS" >> "$CSV"
+          done <<< "$PINNED"
+
+      - name: Commit updated CSV
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add traffic.csv
+          git diff --cached --quiet || git commit -m "stats: $(date -u '+%Y-%m-%d')"
+          git push
