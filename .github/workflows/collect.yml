@@ -2,8 +2,13 @@ name: Collect traffic stats
 
 on:
   schedule:
-    - cron: '0 7 * * *'   # 7am UTC = ~2am Central, after GitHub updates data
-  workflow_dispatch:        # allow manual run
+    - cron: '0 7 * * *'   # 7am UTC (~2am Central), after GitHub updates data
+  workflow_dispatch:
+    inputs:
+      repos_mode:
+        description: 'Which repos to track: pinned, all, or space-separated list'
+        required: false
+        default: ''
 
 jobs:
   collect:
@@ -14,6 +19,41 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Resolve repo list
+        id: repos
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          GH_USER: dmatking
+          # Repo variable REPOS_MODE: "pinned" | "all" | "repo1 repo2 ..."
+          # workflow_dispatch input overrides the variable if provided
+          REPOS_MODE_VAR: ${{ vars.REPOS_MODE }}
+          REPOS_MODE_INPUT: ${{ inputs.repos_mode }}
+        run: |
+          MODE="${REPOS_MODE_INPUT:-$REPOS_MODE_VAR}"
+          MODE="${MODE:-pinned}"   # default to pinned if neither is set
+
+          if [ "$MODE" = "pinned" ]; then
+            REPOS=$(gh api graphql -f query='
+              { user(login: "'"$GH_USER"'") {
+                  pinnedItems(first: 6, types: REPOSITORY) {
+                    nodes { ... on Repository { name } }
+                  }
+                }
+              }' --jq '.data.user.pinnedItems.nodes[].name')
+
+          elif [ "$MODE" = "all" ]; then
+            REPOS=$(gh repo list "$GH_USER" --limit 100 --json name --jq '.[].name')
+
+          else
+            # Treat MODE as a space or comma-separated list of repo names
+            REPOS=$(echo "$MODE" | tr ',' '\n' | tr ' ' '\n' | grep -v '^$')
+          fi
+
+          echo "repos<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$REPOS" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "Repos to collect: $(echo "$REPOS" | wc -l)"
+
       - name: Fetch traffic stats and append to CSV
         env:
           GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
@@ -22,27 +62,20 @@ jobs:
           DATE=$(date -u '+%Y-%m-%d')
           CSV=traffic.csv
 
-          # Write header if file doesn't exist
           if [ ! -f "$CSV" ]; then
             echo "date,repo,views,view_uniques,clones,clone_uniques,stars,forks" > "$CSV"
           fi
 
-          # Fetch pinned repos via GraphQL
-          PINNED=$(gh api graphql -f query='
-            { user(login: "'"$GH_USER"'") {
-                pinnedItems(first: 6, types: REPOSITORY) {
-                  nodes { ... on Repository { name stargazerCount forkCount } }
-                }
-              }
-            }' --jq '.data.user.pinnedItems.nodes[] | [.name, .stargazerCount, .forkCount] | @tsv')
-
-          while IFS=$'\t' read -r REPO STARS FORKS; do
+          while IFS= read -r REPO; do
+            [ -z "$REPO" ] && continue
+            STARS=$(gh api repos/$GH_USER/$REPO --jq '.stargazers_count // 0')
+            FORKS=$(gh api repos/$GH_USER/$REPO --jq '.forks_count // 0')
             VIEWS=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.count // 0')
             VIEW_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.uniques // 0')
             CLONES=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.count // 0')
             CLONE_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.uniques // 0')
             echo "$DATE,$REPO,$VIEWS,$VIEW_UNIQ,$CLONES,$CLONE_UNIQ,$STARS,$FORKS" >> "$CSV"
-          done <<< "$PINNED"
+          done <<< "${{ steps.repos.outputs.repos }}"
 
       - name: Commit updated CSV
         run: |
