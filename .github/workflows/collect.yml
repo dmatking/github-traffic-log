@@ -80,10 +80,24 @@ jobs:
             echo "$DATE,$REPO,$VIEWS,$VIEW_UNIQ,$CLONES,$CLONE_UNIQ,$STARS,$FORKS" >> "$CSV"
           done <<< "${{ steps.repos.outputs.repos }}"
 
-      - name: Commit updated CSV
+      - name: Generate latest.csv (last 2 dates only, for ESP32 consumption)
+        run: |
+          CSV=traffic.csv
+          LATEST=latest.csv
+          HEADER=$(head -1 "$CSV")
+
+          # Find the two most recent distinct dates
+          DATES=$(tail -n +2 "$CSV" | cut -d',' -f1 | sort -u | tail -2)
+
+          echo "$HEADER" > "$LATEST"
+          for D in $DATES; do
+            grep "^$D," "$CSV" >> "$LATEST"
+          done
+
+      - name: Commit updated CSVs
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add traffic.csv
+          git add traffic.csv latest.csv
           git diff --cached --quiet || git commit -m "stats: $(date -u '+%Y-%m-%d')"
           git push
