@@ -64,6 +64,9 @@ jobs:
 
           if [ ! -f "$CSV" ]; then
             echo "date,repo,views,view_uniques,clones,clone_uniques,stars,forks" > "$CSV"
+          else
+            # Remove any existing rows for today to avoid duplicates on re-run
+            grep -v "^$DATE," "$CSV" > "$CSV.tmp" && mv "$CSV.tmp" "$CSV"
           fi
 
           while IFS= read -r REPO; do
