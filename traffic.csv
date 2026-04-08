@@ -35,3 +35,15 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-04-07,dtlab,14,1,79,45,0,0
 2026-04-07,esp32-video-stream,25,2,94,65,0,0
 2026-04-07,shell-toys,26,3,52,38,0,0
+2026-04-08,esp32-terminal,53,7,90,53,1,0
+2026-04-08,esp32-gh-dashboard,37,5,95,66,0,0
+2026-04-08,github-traffic-log,24,2,76,48,0,0
+2026-04-08,esp32-idf-new,62,2,94,49,0,0
+2026-04-08,esp32-p4-webradio,35,4,83,44,0,0
+2026-04-08,esp32-t4-demos,13,5,85,57,0,0
+2026-04-08,esp32-p4-wifi-starter,20,9,30,23,0,0
+2026-04-08,esp32-notes,10,6,37,32,0,0
+2026-04-08,esp32-p4-demos,17,6,66,49,1,0
+2026-04-08,dtlab,16,3,79,45,0,0
+2026-04-08,esp32-video-stream,25,2,94,65,0,0
+2026-04-08,shell-toys,26,3,52,38,0,0
