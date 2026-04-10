@@ -24,13 +24,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           GH_USER: dmatking
-          # Repo variable REPOS_MODE: "pinned" | "all" | "repo1 repo2 ..."
-          # workflow_dispatch input overrides the variable if provided
           REPOS_MODE_VAR: ${{ vars.REPOS_MODE }}
           REPOS_MODE_INPUT: ${{ inputs.repos_mode }}
         run: |
           MODE="${REPOS_MODE_INPUT:-$REPOS_MODE_VAR}"
-          MODE="${MODE:-pinned}"   # default to pinned if neither is set
+          MODE="${MODE:-all}"
 
           if [ "$MODE" = "pinned" ]; then
             REPOS=$(gh api graphql -f query='
@@ -40,12 +38,9 @@ jobs:
                   }
                 }
               }' --jq '.data.user.pinnedItems.nodes[].name')
-
           elif [ "$MODE" = "all" ]; then
             REPOS=$(gh repo list "$GH_USER" --limit 100 --json name --jq '.[].name')
-
           else
-            # Treat MODE as a space or comma-separated list of repo names
             REPOS=$(echo "$MODE" | tr ',' '\n' | tr ' ' '\n' | grep -v '^$')
           fi
 
@@ -54,50 +49,116 @@ jobs:
           echo "EOF" >> "$GITHUB_OUTPUT"
           echo "Repos to collect: $(echo "$REPOS" | wc -l)"
 
-      - name: Fetch traffic stats and append to CSV
+      - name: Fetch daily traffic and upsert into traffic.csv
         env:
           GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           GH_USER: dmatking
         run: |
-          DATE=$(date -u '+%Y-%m-%d')
-          CSV=traffic.csv
-
-          if [ ! -f "$CSV" ]; then
-            echo "date,repo,views,view_uniques,clones,clone_uniques,stars,forks" > "$CSV"
-          else
-            # Remove any existing rows for today to avoid duplicates on re-run
-            grep -v "^$DATE," "$CSV" > "$CSV.tmp" && mv "$CSV.tmp" "$CSV"
-          fi
+          TMP=$(mktemp)
 
           while IFS= read -r REPO; do
             [ -z "$REPO" ] && continue
-            STARS=$(gh api repos/$GH_USER/$REPO --jq '.stargazers_count // 0')
-            FORKS=$(gh api repos/$GH_USER/$REPO --jq '.forks_count // 0')
-            VIEWS=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.count // 0')
-            VIEW_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/views --jq '.uniques // 0')
-            CLONES=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.count // 0')
-            CLONE_UNIQ=$(gh api repos/$GH_USER/$REPO/traffic/clones --jq '.uniques // 0')
-            echo "$DATE,$REPO,$VIEWS,$VIEW_UNIQ,$CLONES,$CLONE_UNIQ,$STARS,$FORKS" >> "$CSV"
+
+            STARS=$(gh api "repos/$GH_USER/$REPO" --jq '.stargazers_count // 0')
+            FORKS=$(gh api "repos/$GH_USER/$REPO" --jq '.forks_count // 0')
+            VIEWS_JSON=$(gh api "repos/$GH_USER/$REPO/traffic/views")
+            CLONES_JSON=$(gh api "repos/$GH_USER/$REPO/traffic/clones")
+
+            # Merge per-day views and clones into single CSV rows using jq
+            jq -rn \
+              --argjson v "$VIEWS_JSON" \
+              --argjson c "$CLONES_JSON" \
+              --arg repo "$REPO" \
+              --arg stars "$STARS" \
+              --arg forks "$FORKS" '
+              ($v.views  | INDEX(.timestamp[:10])) as $vi |
+              ($c.clones | INDEX(.timestamp[:10])) as $ci |
+              ([$v.views[].timestamp[:10], $c.clones[].timestamp[:10]] | unique[]) |
+              . as $d |
+              [$d, $repo,
+               ($vi[$d].count   // 0 | tostring),
+               ($vi[$d].uniques // 0 | tostring),
+               ($ci[$d].count   // 0 | tostring),
+               ($ci[$d].uniques // 0 | tostring),
+               $stars, $forks] | join(",")
+            ' >> "$TMP"
           done <<< "${{ steps.repos.outputs.repos }}"
 
-      - name: Generate latest.csv (last 2 dates only, for ESP32 consumption)
+          # Upsert: merge new rows into traffic.csv, replacing any existing
+          # rows for the same (date, repo) key.
+          python3 - "$TMP" <<'PYEOF'
+import csv, sys
+
+new_rows = {}
+with open(sys.argv[1]) as f:
+    for line in f:
+        line = line.strip()
+        if not line:
+            continue
+        parts = line.split(',')
+        new_rows[(parts[0], parts[1])] = parts
+
+existing = {}
+try:
+    with open('traffic.csv', newline='') as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        for row in reader:
+            existing[(row[0], row[1])] = row
+except FileNotFoundError:
+    header = ['date','repo','views','view_uniques','clones','clone_uniques','stars','forks']
+
+existing.update(new_rows)
+
+with open('traffic.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(header)
+    for key in sorted(existing.keys()):
+        writer.writerow(existing[key])
+PYEOF
+          rm "$TMP"
+
+      - name: Generate totals.csv (true cumulative sums per repo)
         run: |
-          CSV=traffic.csv
-          LATEST=latest.csv
-          HEADER=$(head -1 "$CSV")
+          python3 - <<'PYEOF'
+import csv
+from collections import defaultdict
 
-          # Find the two most recent distinct dates
-          DATES=$(tail -n +2 "$CSV" | cut -d',' -f1 | sort -u | tail -2)
+totals = defaultdict(lambda: [0, 0, 0, 0])
+stars  = {}
+forks  = {}
 
-          echo "$HEADER" > "$LATEST"
+with open('traffic.csv', newline='') as f:
+    for row in csv.DictReader(f):
+        r = row['repo']
+        totals[r][0] += int(row['views'])
+        totals[r][1] += int(row['view_uniques'])
+        totals[r][2] += int(row['clones'])
+        totals[r][3] += int(row['clone_uniques'])
+        stars[r] = row['stars']   # last row wins = most recent date
+        forks[r] = row['forks']
+
+with open('totals.csv', 'w', newline='') as f:
+    w = csv.writer(f)
+    w.writerow(['repo','views','view_uniques','clones','clone_uniques','stars','forks'])
+    for r in sorted(totals):
+        t = totals[r]
+        w.writerow([r, t[0], t[1], t[2], t[3], stars[r], forks[r]])
+PYEOF
+
+      - name: Generate latest.csv (last 2 dates of daily counts, for ESP32)
+        run: |
+          HEADER=$(head -1 traffic.csv)
+          DATES=$(tail -n +2 traffic.csv | cut -d',' -f1 | sort -u | tail -2)
+          echo "$HEADER" > latest.csv
           for D in $DATES; do
-            grep "^$D," "$CSV" >> "$LATEST"
+            grep "^$D," traffic.csv >> latest.csv
           done
 
       - name: Commit updated CSVs
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add traffic.csv latest.csv
+          git add traffic.csv totals.csv latest.csv
           git diff --cached --quiet || git commit -m "stats: $(date -u '+%Y-%m-%d')"
           git push
