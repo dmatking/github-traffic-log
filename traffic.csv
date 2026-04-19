@@ -323,6 +323,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-04-16,esp32-wolfssh-client,0,0,22,16,0,0
 2026-04-16,github-traffic-log,0,0,5,5,0,0
 2026-04-16,shell-toys,0,0,0,0,0,0
+2026-04-17,dtlab,0,0,0,0,0,0
 2026-04-17,esp32-ble-kbd-host,9,3,5,3,1,0
 2026-04-17,esp32-gh-dashboard,1,1,4,4,0,0
 2026-04-17,esp32-idf-new,1,1,0,0,0,0
@@ -330,5 +331,17 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-04-17,esp32-p4-demos,0,0,0,0,1,0
 2026-04-17,esp32-p4-webradio,0,0,0,0,0,0
 2026-04-17,esp32-p4-wifi-starter,0,0,1,1,1,0
+2026-04-17,esp32-t4-demos,0,0,0,0,0,0
+2026-04-17,esp32-terminal,8,3,2,2,1,0
 2026-04-17,esp32-video-stream,0,0,0,0,0,0
+2026-04-17,esp32-wolfssh-client,0,0,0,0,0,0
 2026-04-17,github-traffic-log,0,0,12,9,0,0
+2026-04-17,shell-toys,0,0,0,0,0,0
+2026-04-18,dtlab,0,0,0,0,0,0
+2026-04-18,esp32-gh-dashboard,0,0,1,1,0,0
+2026-04-18,esp32-idf-new,0,0,0,0,0,0
+2026-04-18,esp32-notes,0,0,1,1,0,0
+2026-04-18,esp32-p4-demos,0,0,0,0,1,0
+2026-04-18,esp32-p4-wifi-starter,0,0,0,0,1,0
+2026-04-18,esp32-t4-demos,0,0,0,0,0,0
+2026-04-18,esp32-terminal,0,0,0,0,1,0
