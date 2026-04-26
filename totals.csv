@@ -10,10 +10,10 @@ esp32-notes,13,10,55,45,0,0
 esp32-p4-demos,29,16,54,45,1,0
 esp32-p4-webradio,52,17,97,60,0,0
 esp32-p4-wifi-starter,96,38,44,38,1,0
-esp32-t4-demos,18,12,63,49,0,0
+esp32-t4-demos,18,12,64,50,0,0
 esp32-terminal,149,33,439,182,1,0
 esp32-video-stream,30,7,100,78,0,0
 esp32-wolfssh-client,12,4,141,77,0,0
 github-traffic-log,54,7,391,252,0,0
 m5stack-tab5-video-stream,24,5,69,45,0,0
-shell-toys,7,4,20,20,0,0
+shell-toys,9,5,20,20,0,0
