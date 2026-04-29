@@ -1,9 +1,6 @@
 repo,views,view_uniques,clones,clone_uniques,stars,forks
-M5Stack-Tab5,14,1,23,14,0,0
 dtlab,11,4,71,48,0,0
-esp-ble-kbd-host,0,0,7,6,0,0
-esp-wolfssh-client,2,1,65,35,0,0
-esp32-ble-kbd-host,20,10,84,39,1,0
+esp32-ble-kbd-host,20,10,91,45,1,0
 esp32-gh-dashboard,53,17,190,126,0,0
 esp32-idf-new,102,18,359,160,0,0
 esp32-notes,13,10,58,48,0,0
@@ -13,7 +10,7 @@ esp32-p4-wifi-starter,97,39,44,38,1,0
 esp32-t4-demos,22,15,72,55,0,0
 esp32-terminal,149,33,470,193,1,0
 esp32-video-stream,30,7,103,81,0,0
-esp32-wolfssh-client,15,5,142,78,0,0
+esp32-wolfssh-client,17,6,207,113,0,0
 github-traffic-log,65,8,447,291,0,0
-m5stack-tab5-video-stream,25,6,71,47,1,0
+m5stack-tab5-video-stream,39,7,94,61,1,0
 shell-toys,9,5,22,22,0,0
