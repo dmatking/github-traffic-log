@@ -39,7 +39,7 @@ jobs:
                 }
               }' --jq '.data.user.pinnedItems.nodes[].name')
           elif [ "$MODE" = "all" ]; then
-            REPOS=$(gh repo list "$GH_USER" --limit 100 --json name --jq '.[].name')
+            REPOS=$(gh repo list "$GH_USER" --source --limit 100 --json name --jq '.[].name')
           else
             REPOS=$(echo "$MODE" | tr ',' '\n' | tr ' ' '\n' | grep -v '^$')
           fi
