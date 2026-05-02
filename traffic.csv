@@ -498,6 +498,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-04-30,dtlab,0,0,1,1,0,0
 2026-04-30,esp32-ble-kbd-host,2,1,1,1,1,0
 2026-04-30,esp32-gh-dashboard,6,1,39,15,1,0
+2026-04-30,esp32-idf-new,30,3,114,31,1,0
 2026-04-30,esp32-notes,0,0,1,1,0,0
 2026-04-30,esp32-p4-demos,2,1,1,1,1,0
 2026-04-30,esp32-p4-webradio,2,2,1,1,0,0
@@ -509,3 +510,18 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-04-30,github-traffic-log,0,0,25,10,0,0
 2026-04-30,m5stack-tab5-video-stream,16,2,2,2,1,0
 2026-04-30,shell-toys,0,0,1,1,0,0
+2026-05-01,dtlab,0,0,0,0,0,0
+2026-05-01,esp32-ble-kbd-host,0,0,2,2,1,0
+2026-05-01,esp32-gh-dashboard,0,0,28,11,1,0
+2026-05-01,esp32-idf-new,3,1,14,5,1,0
+2026-05-01,esp32-notes,0,0,5,2,0,0
+2026-05-01,esp32-p4-demos,0,0,2,2,1,0
+2026-05-01,esp32-p4-webradio,4,1,1,1,0,0
+2026-05-01,esp32-p4-wifi-starter,5,2,1,1,1,0
+2026-05-01,esp32-t4-demos,0,0,2,2,0,0
+2026-05-01,esp32-terminal,0,0,6,3,1,0
+2026-05-01,esp32-video-stream,0,0,1,1,0,0
+2026-05-01,esp32-wolfssh-client,4,1,18,9,0,0
+2026-05-01,github-traffic-log,9,2,48,21,0,0
+2026-05-01,m5stack-tab5-video-stream,0,0,1,1,1,0
+2026-05-01,shell-toys,0,0,1,1,0,0
