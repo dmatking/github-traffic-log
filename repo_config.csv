@@ -1,0 +1,13 @@
+repo,show,exclude_totals
+esp32-ble-kbd-host,1,0
+esp32-gh-dashboard,1,0
+esp32-idf-new,1,0
+esp32-notes,1,0
+esp32-p4-demos,1,0
+esp32-p4-webradio,1,0
+esp32-p4-wifi-starter,1,0
+esp32-t4-demos,1,0
+esp32-terminal,1,0
+esp32-video-stream,1,0
+esp32-wolfssh-client,1,0
+dmatking,0,1
