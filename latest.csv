@@ -11,7 +11,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-06-06,esp32-p4-wifi-starter,1,1,2,2,2,0
 2026-06-06,esp32-t4-demos,0,0,1,1,0,0
 2026-06-06,esp32-terminal,0,0,3,3,3,0
-2026-06-06,esp32-video-stream,0,0,1,1,0,0
+2026-06-06,esp32-video-stream,0,0,1,1,0,1
 2026-06-06,esp32-wifi-prov,0,0,1,1,0,0
 2026-06-06,esp32-wolfssh-client,0,0,1,1,0,0
 2026-06-06,github-traffic-log,0,0,11,8,0,0
@@ -29,8 +29,9 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-06-07,esp32-p4-wifi-starter,1,1,0,0,2,0
 2026-06-07,esp32-t4-demos,0,0,0,0,0,0
 2026-06-07,esp32-terminal,0,0,0,0,3,0
-2026-06-07,esp32-video-stream,0,0,0,0,0,0
+2026-06-07,esp32-video-stream,0,0,0,0,0,1
 2026-06-07,esp32-wifi-prov,0,0,1,1,0,0
+2026-06-07,esp32-wolfssh-client,0,0,1,1,0,0
 2026-06-07,github-traffic-log,0,0,19,9,0,0
 2026-06-07,m5stack-tab5-video-stream,0,0,0,0,2,0
 2026-06-07,shell-toys,0,0,0,0,0,0
