@@ -12,9 +12,9 @@ esp32-p4-wifi-starter,217,94,74,66,2,0
 esp32-screencap,0,0,45,19,0,0
 esp32-t4-demos,24,16,104,79,0,0
 esp32-terminal,184,51,584,263,3,0
-esp32-video-stream,40,11,121,99,0,1
+esp32-video-stream,41,12,121,99,0,1
 esp32-wifi-prov,3,3,124,74,0,0
 esp32-wolfssh-client,50,9,253,142,0,0
 github-traffic-log,107,16,1094,699,0,0
 m5stack-tab5-video-stream,63,18,115,81,2,0
-shell-toys,10,6,50,46,0,0
+shell-toys,11,7,51,47,0,0
