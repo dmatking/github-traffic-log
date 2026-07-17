@@ -15,7 +15,7 @@ esp32-terminal,208,70,652,289,4,0
 esp32-video-stream,45,16,137,109,0,1
 esp32-wifi-prov,12,5,149,90,0,0
 esp32-wolfssh-client,50,9,290,159,0,0
-github-traffic-log,108,17,1601,985,0,0
+github-traffic-log,108,17,1610,990,0,0
 m5stack-tab5-ssh-terminal,0,0,0,0,0,0
 m5stack-tab5-video-stream,85,32,132,92,2,0
-shell-toys,13,9,63,59,0,0
+shell-toys,13,9,64,60,0,0
