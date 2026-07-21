@@ -1781,7 +1781,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-07,esp32-p4-webradio,2,2,0,0,4,1
 2026-07-07,esp32-p4-wifi-starter,1,1,0,0,2,0
 2026-07-07,esp32-t4-demos,0,0,0,0,0,0
-2026-07-07,esp32-terminal,2,1,0,0,4,0
+2026-07-07,esp32-terminal,2,1,0,0,5,0
 2026-07-07,esp32-video-stream,0,0,1,1,0,1
 2026-07-07,esp32-wifi-prov,1,1,0,0,0,0
 2026-07-07,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1800,7 +1800,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-08,esp32-p4-webradio,7,5,0,0,4,1
 2026-07-08,esp32-p4-wifi-starter,0,0,0,0,2,0
 2026-07-08,esp32-t4-demos,0,0,0,0,0,0
-2026-07-08,esp32-terminal,1,1,0,0,4,0
+2026-07-08,esp32-terminal,1,1,0,0,5,0
 2026-07-08,esp32-video-stream,1,1,0,0,0,1
 2026-07-08,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-08,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1818,7 +1818,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-09,esp32-p4-demos,0,0,0,0,1,0
 2026-07-09,esp32-p4-webradio,6,3,0,0,4,1
 2026-07-09,esp32-p4-wifi-starter,3,3,0,0,2,0
-2026-07-09,esp32-terminal,0,0,0,0,4,0
+2026-07-09,esp32-terminal,0,0,0,0,5,0
 2026-07-09,esp32-video-stream,0,0,0,0,0,1
 2026-07-09,esp32-wifi-prov,0,0,1,1,0,0
 2026-07-09,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1836,7 +1836,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-10,esp32-p4-demos,0,0,0,0,1,0
 2026-07-10,esp32-p4-webradio,11,3,0,0,4,1
 2026-07-10,esp32-p4-wifi-starter,49,3,2,2,2,0
-2026-07-10,esp32-terminal,0,0,0,0,4,0
+2026-07-10,esp32-terminal,0,0,0,0,5,0
 2026-07-10,esp32-video-stream,0,0,0,0,0,1
 2026-07-10,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-10,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1854,7 +1854,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-11,esp32-p4-demos,1,1,0,0,1,0
 2026-07-11,esp32-p4-webradio,7,5,1,1,4,1
 2026-07-11,esp32-p4-wifi-starter,3,3,2,2,2,0
-2026-07-11,esp32-terminal,1,1,1,1,4,0
+2026-07-11,esp32-terminal,1,1,1,1,5,0
 2026-07-11,esp32-video-stream,1,1,0,0,0,1
 2026-07-11,esp32-wifi-prov,0,0,2,2,0,0
 2026-07-11,esp32-wolfssh-client,0,0,1,1,0,0
@@ -1872,7 +1872,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-12,esp32-p4-demos,0,0,0,0,1,0
 2026-07-12,esp32-p4-webradio,0,0,0,0,4,1
 2026-07-12,esp32-p4-wifi-starter,6,1,0,0,2,0
-2026-07-12,esp32-terminal,0,0,0,0,4,0
+2026-07-12,esp32-terminal,0,0,0,0,5,0
 2026-07-12,esp32-video-stream,0,0,0,0,0,1
 2026-07-12,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-12,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1890,7 +1890,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-13,esp32-p4-demos,0,0,0,0,1,0
 2026-07-13,esp32-p4-webradio,1,1,1,1,4,1
 2026-07-13,esp32-p4-wifi-starter,1,1,1,1,2,0
-2026-07-13,esp32-terminal,1,1,0,0,4,0
+2026-07-13,esp32-terminal,1,1,0,0,5,0
 2026-07-13,esp32-video-stream,0,0,0,0,0,1
 2026-07-13,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-13,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1908,7 +1908,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-14,esp32-p4-demos,0,0,0,0,1,0
 2026-07-14,esp32-p4-webradio,6,2,0,0,4,1
 2026-07-14,esp32-p4-wifi-starter,2,2,0,0,2,0
-2026-07-14,esp32-terminal,1,1,0,0,4,0
+2026-07-14,esp32-terminal,1,1,0,0,5,0
 2026-07-14,esp32-video-stream,0,0,0,0,0,1
 2026-07-14,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-14,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1926,7 +1926,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-15,esp32-p4-demos,0,0,0,0,1,0
 2026-07-15,esp32-p4-webradio,1,1,0,0,4,1
 2026-07-15,esp32-p4-wifi-starter,8,1,0,0,2,0
-2026-07-15,esp32-terminal,0,0,0,0,4,0
+2026-07-15,esp32-terminal,0,0,0,0,5,0
 2026-07-15,esp32-video-stream,0,0,0,0,0,1
 2026-07-15,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-15,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1944,7 +1944,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-16,esp32-p4-demos,0,0,0,0,1,0
 2026-07-16,esp32-p4-webradio,0,0,0,0,4,1
 2026-07-16,esp32-p4-wifi-starter,0,0,0,0,2,0
-2026-07-16,esp32-terminal,0,0,0,0,4,0
+2026-07-16,esp32-terminal,0,0,0,0,5,0
 2026-07-16,esp32-video-stream,0,0,0,0,0,1
 2026-07-16,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-16,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1962,7 +1962,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-17,esp32-p4-demos,0,0,0,0,1,0
 2026-07-17,esp32-p4-webradio,4,2,0,0,4,1
 2026-07-17,esp32-p4-wifi-starter,3,2,0,0,2,0
-2026-07-17,esp32-terminal,0,0,0,0,4,0
+2026-07-17,esp32-terminal,0,0,0,0,5,0
 2026-07-17,esp32-video-stream,0,0,0,0,0,1
 2026-07-17,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-17,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1979,7 +1979,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-18,esp32-p4-demos,0,0,0,0,1,0
 2026-07-18,esp32-p4-webradio,0,0,0,0,4,1
 2026-07-18,esp32-p4-wifi-starter,0,0,0,0,2,0
-2026-07-18,esp32-terminal,0,0,0,0,4,0
+2026-07-18,esp32-terminal,0,0,0,0,5,0
 2026-07-18,esp32-video-stream,0,0,0,0,0,1
 2026-07-18,esp32-wifi-prov,0,0,1,1,0,0
 2026-07-18,esp32-wolfssh-client,0,0,0,0,0,0
@@ -1996,7 +1996,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-19,esp32-p4-demos,0,0,0,0,1,0
 2026-07-19,esp32-p4-webradio,13,5,0,0,4,1
 2026-07-19,esp32-p4-wifi-starter,0,0,0,0,2,0
-2026-07-19,esp32-terminal,0,0,0,0,4,0
+2026-07-19,esp32-terminal,0,0,0,0,5,0
 2026-07-19,esp32-video-stream,0,0,0,0,0,1
 2026-07-19,esp32-wifi-prov,0,0,0,0,0,0
 2026-07-19,esp32-wolfssh-client,0,0,0,0,0,0
@@ -2004,4 +2004,21 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-19,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
 2026-07-19,m5stack-tab5-video-stream,0,0,0,0,2,0
 2026-07-19,shell-toys,0,0,1,1,0,0
+2026-07-20,display-sim,0,0,1,1,0,0
+2026-07-20,dmatking,0,0,0,0,0,0
+2026-07-20,esp32-ble-kbd-host,1,1,0,0,1,0
+2026-07-20,esp32-gh-dashboard,0,0,1,1,1,0
+2026-07-20,esp32-idf-new,0,0,0,0,1,0
+2026-07-20,esp32-notes,0,0,0,0,0,0
+2026-07-20,esp32-p4-demos,0,0,0,0,1,0
+2026-07-20,esp32-p4-webradio,0,0,0,0,4,1
+2026-07-20,esp32-p4-wifi-starter,7,2,0,0,2,0
+2026-07-20,esp32-terminal,4,2,0,0,5,0
+2026-07-20,esp32-video-stream,0,0,0,0,0,1
+2026-07-20,esp32-wifi-prov,0,0,0,0,0,0
+2026-07-20,esp32-wolfssh-client,0,0,0,0,0,0
+2026-07-20,github-traffic-log,0,0,2,2,0,0
 2026-07-20,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-07-20,m5stack-tab5-video-stream,0,0,0,0,2,0
+2026-07-20,shell-toys,0,0,0,0,0,0
+2026-07-21,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
