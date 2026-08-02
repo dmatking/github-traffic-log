@@ -2226,6 +2226,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-30,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
 2026-07-30,m5stack-tab5-video-stream,0,0,0,0,2,0
 2026-07-30,shell-toys,0,0,0,0,0,0
+2026-07-31,display-sim,0,0,0,0,0,0
 2026-07-31,dmatking,0,0,0,0,0,0
 2026-07-31,dtlab,0,0,0,0,0,0
 2026-07-31,esp32-ble-kbd-host,0,0,0,0,1,0
@@ -2235,9 +2236,16 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-07-31,esp32-p4-demos,0,0,0,0,1,0
 2026-07-31,esp32-p4-webradio,17,3,3,2,5,1
 2026-07-31,esp32-p4-wifi-starter,1,1,0,0,2,0
+2026-07-31,esp32-t4-demos,0,0,0,0,0,0
+2026-07-31,esp32-terminal,1,1,0,0,5,0
 2026-07-31,esp32-video-stream,0,0,0,0,0,1
+2026-07-31,esp32-wifi-prov,0,0,1,1,0,0
+2026-07-31,esp32-wolfssh-client,0,0,0,0,0,0
 2026-07-31,github-traffic-log,0,0,4,4,0,0
 2026-07-31,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
 2026-07-31,m5stack-tab5-video-stream,0,0,0,0,2,0
 2026-07-31,shell-toys,0,0,0,0,0,0
+2026-08-01,display-sim,0,0,0,0,0,0
+2026-08-01,esp32-p4-wifi-starter,8,2,1,1,2,0
 2026-08-01,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-08-02,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
