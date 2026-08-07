@@ -3,12 +3,12 @@ display-sim,21,4,214,102,0,0
 dmatking,19,7,154,109,0,0
 dtlab,13,6,141,96,0,0
 esp32-ble-kbd-host,66,23,153,91,1,0
-esp32-gh-dashboard,229,67,831,385,1,0
+esp32-gh-dashboard,229,67,832,386,1,0
 esp32-idf-new,228,61,733,303,1,0
-esp32-notes,32,26,112,90,0,0
+esp32-notes,33,27,113,91,0,0
 esp32-p4-demos,54,29,99,86,1,0
 esp32-p4-webradio,566,172,506,257,5,1
-esp32-p4-wifi-starter,430,181,211,111,2,0
+esp32-p4-wifi-starter,435,183,213,113,2,0
 esp32-screencap,0,0,45,19,0,0
 esp32-t4-demos,26,18,133,97,0,0
 esp32-terminal,220,79,661,296,5,0
@@ -17,5 +17,5 @@ esp32-wifi-prov,12,5,154,95,0,0
 esp32-wolfssh-client,50,9,293,162,0,0
 github-traffic-log,122,19,1689,1055,0,0
 m5stack-tab5-ssh-terminal,0,0,0,0,0,0
-m5stack-tab5-video-stream,93,37,136,96,2,0
+m5stack-tab5-video-stream,94,38,136,96,2,0
 shell-toys,13,9,73,66,0,0
