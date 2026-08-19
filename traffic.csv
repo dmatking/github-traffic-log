@@ -2541,6 +2541,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-08-16,dmatking,0,0,0,0,0,0
 2026-08-16,dtlab,0,0,1,1,0,0
 2026-08-16,esp32-ble-kbd-host,0,0,0,0,1,0
+2026-08-16,esp32-gh-dashboard,0,0,0,0,1,0
 2026-08-16,esp32-idf-new,0,0,0,0,1,0
 2026-08-16,esp32-notes,1,1,0,0,0,0
 2026-08-16,esp32-p4-demos,0,0,0,0,1,0
@@ -2553,11 +2554,13 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-08-16,github-traffic-log,0,0,2,2,0,0
 2026-08-16,m5stack-tab5-gps,0,0,0,0,1,0
 2026-08-16,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-08-16,m5stack-tab5-video-stream,0,0,0,0,2,0
 2026-08-16,shell-toys,1,1,0,0,0,0
 2026-08-17,display-sim,0,0,0,0,0,0
 2026-08-17,dmatking,0,0,0,0,0,0
 2026-08-17,dtlab,0,0,0,0,0,0
 2026-08-17,esp32-ble-kbd-host,0,0,0,0,1,0
+2026-08-17,esp32-gh-dashboard,1,1,0,0,1,0
 2026-08-17,esp32-idf-new,2,2,0,0,1,0
 2026-08-17,esp32-notes,1,1,0,0,0,0
 2026-08-17,esp32-p4-demos,1,1,0,0,1,0
@@ -2570,5 +2573,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-08-17,github-traffic-log,0,0,1,1,0,0
 2026-08-17,m5stack-tab5-gps,16,4,12,10,1,0
 2026-08-17,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-08-17,m5stack-tab5-video-stream,1,1,0,0,2,0
 2026-08-17,shell-toys,1,1,0,0,0,0
 2026-08-18,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-08-19,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
