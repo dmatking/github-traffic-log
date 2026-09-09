@@ -7,7 +7,7 @@ esp32-gh-dashboard,259,79,841,394,1,0
 esp32-idf-new,259,82,749,318,1,0
 esp32-notes,44,38,120,97,0,0
 esp32-p4-demos,60,34,106,92,1,0
-esp32-p4-webradio,899,271,535,280,7,1
+esp32-p4-webradio,899,271,535,280,8,1
 esp32-p4-wifi-starter,624,248,724,172,2,0
 esp32-screencap,0,0,45,19,0,0
 esp32-t4-demos,26,18,142,105,0,0
@@ -18,5 +18,5 @@ esp32-wolfssh-client,50,9,306,174,0,0
 github-traffic-log,133,23,1792,1137,0,0
 m5stack-tab5-gps,73,33,60,44,5,0
 m5stack-tab5-ssh-terminal,0,0,0,0,0,0
-m5stack-tab5-video-stream,131,61,155,111,2,0
+m5stack-tab5-video-stream,133,63,155,111,2,0
 shell-toys,18,14,83,76,0,0
