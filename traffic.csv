@@ -3810,7 +3810,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-18,esp32-idf-new,0,0,1,1,1,0
 2026-10-18,esp32-notes,0,0,1,1,0,0
 2026-10-18,esp32-p4-demos,0,0,1,1,1,0
-2026-10-18,esp32-p4-webradio,5,3,1,1,13,1
+2026-10-18,esp32-p4-webradio,5,3,1,1,14,1
 2026-10-18,esp32-p4-wifi-starter,0,0,0,0,4,0
 2026-10-18,esp32-t4-demos,0,0,1,1,0,0
 2026-10-18,esp32-terminal,0,0,4,4,8,0
@@ -3830,7 +3830,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-19,esp32-idf-new,0,0,0,0,1,0
 2026-10-19,esp32-notes,0,0,1,1,0,0
 2026-10-19,esp32-p4-demos,0,0,1,1,1,0
-2026-10-19,esp32-p4-webradio,5,3,3,3,13,1
+2026-10-19,esp32-p4-webradio,5,3,3,3,14,1
 2026-10-19,esp32-p4-wifi-starter,1,1,1,1,4,0
 2026-10-19,esp32-t4-demos,0,0,0,0,0,0
 2026-10-19,esp32-terminal,0,0,4,4,8,0
@@ -3850,7 +3850,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-20,esp32-idf-new,0,0,2,2,1,0
 2026-10-20,esp32-notes,0,0,0,0,0,0
 2026-10-20,esp32-p4-demos,0,0,0,0,1,0
-2026-10-20,esp32-p4-webradio,4,2,1,1,13,1
+2026-10-20,esp32-p4-webradio,4,2,1,1,14,1
 2026-10-20,esp32-p4-wifi-starter,4,3,1,1,4,0
 2026-10-20,esp32-t4-demos,0,0,1,1,0,0
 2026-10-20,esp32-terminal,0,0,0,0,8,0
@@ -3870,7 +3870,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-21,esp32-idf-new,0,0,2,2,1,0
 2026-10-21,esp32-notes,0,0,1,1,0,0
 2026-10-21,esp32-p4-demos,0,0,1,1,1,0
-2026-10-21,esp32-p4-webradio,0,0,4,2,13,1
+2026-10-21,esp32-p4-webradio,0,0,4,2,14,1
 2026-10-21,esp32-p4-wifi-starter,0,0,1,1,4,0
 2026-10-21,esp32-t4-demos,0,0,0,0,0,0
 2026-10-21,esp32-terminal,0,0,7,6,8,0
@@ -3890,7 +3890,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-22,esp32-idf-new,1,1,0,0,1,0
 2026-10-22,esp32-notes,0,0,0,0,0,0
 2026-10-22,esp32-p4-demos,0,0,0,0,1,0
-2026-10-22,esp32-p4-webradio,0,0,3,2,13,1
+2026-10-22,esp32-p4-webradio,0,0,3,2,14,1
 2026-10-22,esp32-p4-wifi-starter,0,0,0,0,4,0
 2026-10-22,esp32-t4-demos,0,0,0,0,0,0
 2026-10-22,esp32-terminal,0,0,0,0,8,0
@@ -3910,7 +3910,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-23,esp32-idf-new,0,0,0,0,1,0
 2026-10-23,esp32-notes,0,0,0,0,0,0
 2026-10-23,esp32-p4-demos,0,0,0,0,1,0
-2026-10-23,esp32-p4-webradio,2,2,0,0,13,1
+2026-10-23,esp32-p4-webradio,2,2,0,0,14,1
 2026-10-23,esp32-p4-wifi-starter,2,1,2,1,4,0
 2026-10-23,esp32-t4-demos,0,0,0,0,0,0
 2026-10-23,esp32-terminal,0,0,0,0,8,0
@@ -3930,7 +3930,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-24,esp32-idf-new,2,2,1,1,1,0
 2026-10-24,esp32-notes,0,0,0,0,0,0
 2026-10-24,esp32-p4-demos,0,0,0,0,1,0
-2026-10-24,esp32-p4-webradio,8,6,1,1,13,1
+2026-10-24,esp32-p4-webradio,8,6,1,1,14,1
 2026-10-24,esp32-p4-wifi-starter,0,0,1,1,4,0
 2026-10-24,esp32-t4-demos,0,0,0,0,0,0
 2026-10-24,esp32-terminal,1,1,1,1,8,0
@@ -3950,7 +3950,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-25,esp32-idf-new,0,0,2,2,1,0
 2026-10-25,esp32-notes,1,1,0,0,0,0
 2026-10-25,esp32-p4-demos,1,1,1,1,1,0
-2026-10-25,esp32-p4-webradio,19,8,1,1,13,1
+2026-10-25,esp32-p4-webradio,19,8,1,1,14,1
 2026-10-25,esp32-p4-wifi-starter,1,1,0,0,4,0
 2026-10-25,esp32-t4-demos,0,0,0,0,0,0
 2026-10-25,esp32-terminal,1,1,1,1,8,0
@@ -3970,7 +3970,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-26,esp32-idf-new,2,2,0,0,1,0
 2026-10-26,esp32-notes,0,0,0,0,0,0
 2026-10-26,esp32-p4-demos,0,0,1,1,1,0
-2026-10-26,esp32-p4-webradio,1,1,0,0,13,1
+2026-10-26,esp32-p4-webradio,1,1,0,0,14,1
 2026-10-26,esp32-p4-wifi-starter,0,0,0,0,4,0
 2026-10-26,esp32-t4-demos,0,0,4,3,0,0
 2026-10-26,esp32-terminal,0,0,1,1,8,0
@@ -3990,7 +3990,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-27,esp32-idf-new,1,1,0,0,1,0
 2026-10-27,esp32-notes,1,1,0,0,0,0
 2026-10-27,esp32-p4-demos,0,0,0,0,1,0
-2026-10-27,esp32-p4-webradio,7,6,2,1,13,1
+2026-10-27,esp32-p4-webradio,7,6,2,1,14,1
 2026-10-27,esp32-p4-wifi-starter,2,2,0,0,4,0
 2026-10-27,esp32-t4-demos,1,1,0,0,0,0
 2026-10-27,esp32-terminal,0,0,2,1,8,0
@@ -4010,7 +4010,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-28,esp32-idf-new,3,3,0,0,1,0
 2026-10-28,esp32-notes,0,0,0,0,0,0
 2026-10-28,esp32-p4-demos,2,2,0,0,1,0
-2026-10-28,esp32-p4-webradio,7,5,0,0,13,1
+2026-10-28,esp32-p4-webradio,7,5,0,0,14,1
 2026-10-28,esp32-p4-wifi-starter,4,4,0,0,4,0
 2026-10-28,esp32-t4-demos,3,3,0,0,0,0
 2026-10-28,esp32-terminal,2,2,0,0,8,0
@@ -4030,7 +4030,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-29,esp32-idf-new,5,5,1,1,1,0
 2026-10-29,esp32-notes,2,2,1,1,0,0
 2026-10-29,esp32-p4-demos,3,3,1,1,1,0
-2026-10-29,esp32-p4-webradio,8,4,4,4,13,1
+2026-10-29,esp32-p4-webradio,8,4,4,4,14,1
 2026-10-29,esp32-p4-wifi-starter,5,5,1,1,4,0
 2026-10-29,esp32-t4-demos,3,3,1,1,0,0
 2026-10-29,esp32-terminal,3,3,1,1,8,0
@@ -4050,7 +4050,7 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-30,esp32-idf-new,4,4,0,0,1,0
 2026-10-30,esp32-notes,1,1,0,0,0,0
 2026-10-30,esp32-p4-demos,4,4,0,0,1,0
-2026-10-30,esp32-p4-webradio,2,2,1,1,13,1
+2026-10-30,esp32-p4-webradio,2,2,1,1,14,1
 2026-10-30,esp32-p4-wifi-starter,1,1,0,0,4,0
 2026-10-30,esp32-t4-demos,0,0,0,0,0,0
 2026-10-30,esp32-terminal,0,0,2,2,8,0
@@ -4062,4 +4062,24 @@ date,repo,views,view_uniques,clones,clone_uniques,stars,forks
 2026-10-30,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
 2026-10-30,m5stack-tab5-video-stream,1,1,0,0,2,0
 2026-10-30,shell-toys,1,1,2,1,0,0
+2026-10-31,display-sim,1,1,1,1,0,0
+2026-10-31,dmatking,0,0,1,1,0,0
+2026-10-31,dtlab,0,0,0,0,0,0
+2026-10-31,esp32-ble-kbd-host,0,0,0,0,1,0
+2026-10-31,esp32-gh-dashboard,0,0,0,0,1,0
+2026-10-31,esp32-idf-new,0,0,1,1,1,0
+2026-10-31,esp32-notes,2,2,0,0,0,0
+2026-10-31,esp32-p4-demos,0,0,0,0,1,0
+2026-10-31,esp32-p4-webradio,36,11,0,0,14,1
+2026-10-31,esp32-p4-wifi-starter,2,2,1,1,4,0
+2026-10-31,esp32-t4-demos,0,0,1,1,0,0
+2026-10-31,esp32-terminal,1,1,2,2,8,0
+2026-10-31,esp32-video-stream,0,0,0,0,0,1
+2026-10-31,esp32-wifi-prov,0,0,0,0,0,0
+2026-10-31,esp32-wolfssh-client,0,0,2,1,0,0
+2026-10-31,github-traffic-log,0,0,6,4,0,0
+2026-10-31,m5stack-tab5-gps,35,2,2,2,10,0
 2026-10-31,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
+2026-10-31,m5stack-tab5-video-stream,0,0,0,0,2,0
+2026-10-31,shell-toys,0,0,0,0,0,0
+2026-11-01,m5stack-tab5-ssh-terminal,0,0,0,0,0,0
