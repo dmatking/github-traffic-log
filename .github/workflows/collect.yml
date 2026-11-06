@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
 
     steps:
       - uses: actions/checkout@v4
@@ -105,3 +106,29 @@ jobs:
           git add traffic.csv totals.csv latest.csv
           git diff --cached --quiet || git commit -m "stats: $(date -u '+%Y-%m-%d')"
           git push
+
+      - name: Open issue on failure (deduped)
+        if: failure() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          LABEL="collector-failure"
+          EXISTING=$(gh issue list --repo "$GITHUB_REPOSITORY" \
+            --label "$LABEL" --state open --json number --jq '.[0].number')
+          BODY="Scheduled collection failed: $RUN_URL
+
+          Most common cause: \`TRAFFIC_TOKEN\` PAT has expired. Rotate it at
+          https://github.com/settings/tokens and update the secret:
+          \`gh secret set TRAFFIC_TOKEN --repo $GITHUB_REPOSITORY\`"
+
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --repo "$GITHUB_REPOSITORY" --body "$BODY"
+          else
+            gh label create "$LABEL" --repo "$GITHUB_REPOSITORY" \
+              --color "d73a4a" --description "Scheduled collector run failed" 2>/dev/null || true
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "Traffic collector failing" \
+              --label "$LABEL" \
+              --body "$BODY"
+          fi
